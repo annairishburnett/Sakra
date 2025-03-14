@@ -1,0 +1,359 @@
+/* Box Model Hack */
+* {
+     box-sizing: border-box;
+}
+
+/* Clear fix hack */
+.clearfix:after {
+     content: ".";
+     display: block;
+     clear: both;
+     visibility: hidden;
+     line-height: 0;
+     height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+     font-family: "mr-eaves-xl-modern", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+     color: #191915;
+     background: #fff;
+}
+
+h1 {
+     font-size: 30px;
+     color: #FFF;
+}
+
+p {
+     margin: 0.5em 13em;
+}
+
+     .marginBottom {
+          margin-bottom: 2.2em;
+     }
+
+a {
+     color: #AD8374;
+}
+
+.bold {
+     font-weight: 700;
+}
+
+.extraLeading {
+     line-height: 1.5em;
+}
+
+iframe {
+     max-width: 100%;
+     display: block;
+     margin: 3em auto;
+}
+
+.marginTop {
+     margin-top: 6em;
+}
+
+.allCaps {
+     text-transform: uppercase;
+}
+
+/******************************************
+/* LAYOUT
+/*******************************************/
+
+
+/* Logo */
+.logo {
+     width: 150px;
+     height: 39px;
+     display: block;
+     object-fit: cover;
+     margin: 0 auto;
+}
+
+     .logo.atelier {
+          height: 52px;
+     }
+
+     .logo.bridal {
+          height: 55px;
+     }
+
+
+/* NAV */
+
+#header {
+     position: sticky;
+     top: 0;
+     /* padding: 10px 16px; */
+     background: #FFF;
+     color: #AD8374;   
+     height: fit-content; 
+}
+
+/* Basic styles for the navbar */
+.navbar {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     padding: 10px 20px;
+     background-color: #FFF;
+     /* Green background */
+     color: #AD8374;
+ }
+ 
+ /* Navigation links styling */
+ .nav-links {
+     height: 50px;
+     display: flex;
+     align-items: center;
+     list-style: none;
+ }
+ 
+ .nav-links li {
+     margin: 0 15px;
+     color: #AD8374;
+     font-size: 18px;
+ }
+
+     .nav-links .flexItemRight {
+         margin-left: auto;
+         margin-right: 0;
+     }
+
+     footer .nav-links li:last-child a {
+          padding: 0;
+     }
+ 
+ .nav-links a {
+     color: #AD8374;
+     text-decoration: none;
+     font-size: 18px;
+     transition: color 0.3s, text-decoration 0.3s, background-color 0.3s;
+     padding: 0 10px;
+     font-family: "mr-eaves-xl-modern", sans-serif;
+ }
+
+     .nav-links a.logo {
+          padding: 0;
+          width: 150px;
+     }
+
+     .logo.body {
+          padding-left: 17px;
+          width: 167px;
+          margin: 5em auto 3.5em auto;
+          display: block;
+     }
+ 
+ .nav-links a:hover,
+ .nav-links a.active {
+     /* Feldspar #AD8374 w/transparency added*/
+     /* color: #AD8374c1; */
+     border-bottom: 1px solid #AD8374;
+ }
+
+     .nav-links a.logo:hover {
+          border-bottom: none;
+     }
+
+
+ 
+ /* Menu toggle button for mobile view */
+ .menu-toggle {
+     display: none;
+     flex-direction: column;
+     cursor: pointer;
+ }
+ 
+ .menu-toggle .bar {
+     background-color: #FFF;
+     height: 3px;
+     width: 25px;
+     margin: 5px;
+ }
+ 
+ /* Responsive styling */
+ @media (max-width: 768px) {
+     .nav-links {
+         display: none;
+         flex-direction: column;
+         width: 100%;
+         position: absolute;
+         top: 60px;
+         left: 0;
+         background-color: #FFF;
+     }
+ 
+     .nav-links.active {
+         display: flex;
+     }
+ 
+     .nav-links li {
+         margin: 10px 0;
+         text-align: center;
+     }
+ 
+     .menu-toggle {
+         display: flex;
+     }
+
+     .navbar {
+          justify-content: flex-end;
+          margin: 15px 0;
+     }
+ }
+
+/* Dropotron */
+
+#main-nav ul { 
+     list-style: none; 
+     margin: 0; 
+     padding: 0; 
+}
+
+#main-nav ul li { 
+     display: inline-block; 
+     margin: 0 1em 0 1em; 
+     padding: 0.35em 0.75em 0.35em 0.75em; 
+     border-radius: 0.5em; 
+}
+#main-nav ul li.active { 
+     background: #999; 
+}
+#main-nav ul li.active a { 
+     color: #fff; 
+     text-decoration: none; 
+}
+.dropotron { 
+     background: #444; 
+     border-radius: 0.5em; 
+     list-style: none; 
+     margin: 0; 
+     min-width: 10em; 
+     padding: 0.75em 1em 0.75em 1em; 
+}
+.dropotron > li { 
+     border-top: solid 1px #555; 
+     margin: 0; 
+     padding: 0; 
+}
+.dropotron > li:first-child { 
+     border-top: 0; 
+}
+.dropotron > li > a { 
+     color: #ccc; 
+     display: block; 
+     padding: 0.5em 0 0.5em 0; 
+     text-decoration: none; 
+}
+.dropotron > li.active > a, .dropotron > li:hover > a { 
+     color: #fff; 
+}
+.dropotron.level-0 { 
+     margin-top: 1.25em; 
+}
+.dropotron.level-0:before { 
+     content: ''; 
+     position: absolute; 
+     border-bottom: solid 0.5em #444; 
+     border-left: solid 0.5em transparent; 
+     border-right: solid 0.5em transparent; 
+     top: -0.5em; 
+}
+
+
+/* BODY */
+main {
+     width: 100%;
+     height: 1500px;
+     text-align: center;
+}
+
+     #indexMain {
+          height: 1656px;
+          padding: 11em 0 8em 0;
+          background-image: url("../img/alex-grassy-beach.webp");
+          background-position: center center;
+          background-size: cover;
+          line-height: 2;
+     }
+
+/* BUTTONS */
+
+button {
+     border: 1px solid white;
+     padding: 1em 2em;
+     /* border-radius: 4px; */
+     background: none;
+}
+
+     button a {
+          text-decoration: none;
+          font-size: 1.3em;
+          font-weight: 700;
+          color: #FFF;
+     }
+
+     button#bookAppt {
+          margin-top: 25rem;
+     }
+
+     button:hover {
+          transform: translateY(-2px);
+     }
+
+/* IMAGES */
+
+img {
+     max-width: 100%;
+}
+
+.imgMargin {
+     margin: 3em 2em;
+}
+
+/******************************************
+/* ADDITIONAL STYLES
+/*******************************************/
+
+/* smartphones, portrait iPhone, portrait 480x320 phones (Android) */
+@media (min-width:320px) { 
+      
+}
+
+/* smartphones, Android phones, landscape iPhone */
+@media (min-width:480px) {
+       
+}
+
+/* portrait tablets, portrait iPad, e-readers (Nook/Kindle), landscape 800x480 phones (Android) */
+@media (min-width:600px) { 
+      
+}
+
+/* tablet, landscape iPad, lo-res laptops ands desktops */
+@media (min-width:801px) { 
+      
+}
+
+/* big landscape tablets, laptops, and desktops */
+@media (min-width:1025px) { 
+      
+}
+
+/* hi-res laptops and desktops */
+@media (min-width:1281px) { 
+      
+}
